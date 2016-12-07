@@ -72,8 +72,8 @@ router.get('/insert', function(req, res){
     }
 });
 
-// Delete a skill for the given email
-router.get('/skill', function(req, res){
+// Delete a skill for the given skill_id
+router.get('/delete', function(req, res){
     if(req.query.skill_id == null) {
         res.send('skill_id is null');
     }
