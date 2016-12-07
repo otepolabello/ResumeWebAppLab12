@@ -12,7 +12,7 @@
             <tr><th>Email</th><th>Name</th></tr>
             <% for(var i=0; result.length > i; i++ ) { %>
             <tr>
-                <td><a href="/account/?account_id<%= result[i].account_id%>"><%= result[i].email%></a></td>
+                <td><a href="/account/?account_id=<%= result[i].account_id%>"><%= result[i].email%></a></td>
                 <td><%= result[i].first_name + ' ' + result[i].last_name%>
 
                 <td><form action="/account/delete/">
