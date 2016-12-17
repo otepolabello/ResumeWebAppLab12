@@ -44,3 +44,22 @@ exports.delete = function(account_id, callback) {
     });
 
 };
+
+exports.update = function(params, callback) {
+    var query = 'UPDATE account SET account_id = ?, email = ?, first_name = ?, last_name = ? WHERE email = ?';
+    var queryData = [params.account_id, params.first_name, params.last_name, params.email];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+};
+
+
+exports.edit = function(account_id, callback) {
+    var query = 'CALL account';
+    var queryData = [account_id];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+};

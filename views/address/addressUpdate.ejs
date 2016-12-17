@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Update <%= address.address_id%></title>
+</head>
+<body>
+<h1>Update <%= address.address_id%></h1>
+<form action="/adress/update" method="get">
+    <input type="hidden" id="address_id" name="address_id" value="<%= address.address_id %>">
+    Agency Name: <input id="email" name="email" type="text" value="<%= account.email%>"/>
+    <br />
+    <br />
+    <!--Address: <input id="address" name="address" type="text" value="<%= account.address%>"/>-->
+    <!--<select id="address" name="address">-->
+
+
+    <!--</select>-->
+
+    <br />
+
+    <input type="submit" />
+
+</form>
+</body>
+
+</html>
